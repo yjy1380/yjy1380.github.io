@@ -848,7 +848,19 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Comment</h3>
+    <div id="gitalk-container"></div>
+    <script>
+    var gitalk = new Gitalk({
+      clientID: '1381b31b7d733495288b', //上面申请的Client ID
+      clientSecret: '9d2aa9cef4380ea6e6ab9ae7f9dcc77ba69c496d', //上面申请的Client Secret
+      repo: 'https://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@github.com/yjy1380/yjy1380.github.io.git', //GitHub仓库，评论可以在里面查询
+      owner: 'yjy1380', //GitHub的用户名
+      admin: ['yjy1380'], //这里也是填GitHub的用户名，不过是数组形式，如['user1','user2']
+      id: location.pathname,      // Ensure uniqueness and length less than 50 唯一值，如果和其他页面一样，则两个页面显示的评论都一样
+      distractionFreeMode: false  // Facebook-like distraction free mode})gitalk.render('gitalk-container') 这里具体功能我还不清楚，到时候懂了再告诉大家，不如我天true
+    })
+    </script>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python%E5%9F%BA%E7%A1%80/">Python基础</a></li></ul>
     </div>
